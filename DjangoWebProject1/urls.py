@@ -26,7 +26,9 @@ admin.site.register(HOADON)
 from app.models import THONGKEDOANHTHU
 admin.site.register(THONGKEDOANHTHU)
 
+
 urlpatterns = [
+    path('',views.list),
     path('', views.home, name='home'),
     path('register/', views.register, name='register'),
     path('contact/', views.contact, name='contact'),

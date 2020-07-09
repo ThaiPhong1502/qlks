@@ -205,13 +205,13 @@
         </div>
 
         <div class="row">
-
+            {% for item in object_list %}
           <div class="col-lg-4 col-md-6">
             <div class="hotel">
               <div class="hotel-img">
-                <img src="../../static/app/img/hotels/1.jpg" alt="Hotel 1" class="img-fluid">
+                <a href="{% url 'about' %}"><img src="../../static/app/img/hotels/1.jpg" alt="Hotel 1" class="img-fluid"></a>
               </div>
-              <h3><a href="#">Khách sạn 1</a></h3>
+              <h3><a hhref="{% url 'about' %}">{{ item.TenPhong }}</a></h3>
               <div class="stars">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -222,39 +222,8 @@
               <p>Đánh giá là: tuyệt vời</p>
             </div>
           </div>
+            {% endfor %}
 
-          <div class="col-lg-4 col-md-6">
-            <div class="hotel">
-              <div class="hotel-img">
-                <img src="../../static/app/img/hotels/2.jpg" alt="Hotel 2" class="img-fluid">
-              </div>
-              <h3><a href="#">Khách sạn 2</a></h3>
-              <div class="stars">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-half-full"></i>
-              </div>
-              <p>Đánh giá là: tuyệt vời</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="hotel">
-              <div class="hotel-img">
-                <img src="../../static/app/img/hotels/3.jpg" alt="Hotel 3" class="img-fluid">
-              </div>
-              <h3><a href="#">Khách sạn 3</a></h3>
-              <div class="stars">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <p>Đánh giá là: tuyệt vời</p>
-            </div>
-          </div>
 
         </div>
       </div>

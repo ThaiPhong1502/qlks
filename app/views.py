@@ -8,6 +8,11 @@ from django.http import HttpRequest
 from .forms import RegistrationForm
 from django.http import HttpResponseRedirect 
 
+from app.models import PHONG
+def list(request):
+    object_list=PHONG.objects.filter()
+    return render(request,'app/index.html',{'object_list':object_list})
+
 def register(request):
     form = RegistrationForm()
     if request.method == 'POST':
