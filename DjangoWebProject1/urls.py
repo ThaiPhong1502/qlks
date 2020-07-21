@@ -20,6 +20,9 @@ admin.site.register(LOAIKHACHHANG)
 from app.models import KHACHHANG
 admin.site.register(KHACHHANG)
 
+from app.models import PHIEUDATPHONG
+admin.site.register(PHIEUDATPHONG)
+
 from app.models import HOADON
 admin.site.register(HOADON)
 
